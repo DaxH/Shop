@@ -11,6 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Vista.Menu"></activity>
         <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity android:name=".Vista.SplashActivityShop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer);

@@ -6,7 +6,7 @@
        android:id="@+id/tool_bar"
        android:layout_width="match_parent"
        android:layout_height="?attr/actionBarSize"
-       android:background="@color/colorSecundario"
+       android:background="@color/colorPrincipal"
        android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
    </androidx.appcompat.widget.Toolbar>

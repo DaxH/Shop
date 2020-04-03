@@ -7,7 +7,6 @@ import android.os.Handler;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.shop.MainActivity;
 import com.example.shop.R;
 
 public class SplashActivityShop extends AppCompatActivity {

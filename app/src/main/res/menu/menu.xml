@@ -8,6 +8,14 @@
                 android:title="Home"
                 >
             </item>
+            <item
+                android:id="@+id/usuarios"
+                android:icon="@color/design_default_color_primary"
+                android:title="Usuarios" />
+            <item
+                android:id="@+id/productos"
+                android:icon="@color/design_default_color_secondary_variant"
+                android:title="Productos" />
         </menu>
     </item>
 </menu>

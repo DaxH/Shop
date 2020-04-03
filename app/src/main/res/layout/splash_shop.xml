@@ -3,13 +3,13 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFC107" >
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:id="@+id/imageViewSplash"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:scaleType="center"
-        android:background="@color/colorPrincipal"
-        app:srcCompat="@drawable/logo_shop" />
+        android:foregroundGravity="top|left|bottom|center"
+        app:srcCompat="@drawable/splash_logo" />
 </RelativeLayout>

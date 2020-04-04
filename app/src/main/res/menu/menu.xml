@@ -5,8 +5,27 @@
             <item
                 android:id="@+id/home"
                 android:icon="@drawable/ic_home"
-                android:title="Home"
-                >
+                android:title="@string/home">
+            </item>
+            <item
+                android:id="@+id/producto"
+                android:icon="@drawable/ic_producto"
+                android:title="@string/producto">
+            </item>
+            <item
+                android:id="@+id/usuario"
+                android:icon="@drawable/ic_person"
+                android:title="@string/cliente">
+            </item>
+            <item
+                android:id="@+id/categoria_producto"
+                android:icon="@drawable/ic_categoria"
+                android:title="@string/categoria_producto">
+            </item>
+            <item
+                android:id="@+id/pedido"
+                android:icon="@drawable/ic_shop_cart"
+                android:title="@string/pedido">
             </item>
         </menu>
     </item>

@@ -2,4 +2,9 @@
     <string name="app_name">Shop</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="producto">Productos</string>
+    <string name="home">Home</string>
+    <string name="categoria_producto">Categorias Productos</string>
+    <string name="cliente">Clientes</string>
+    <string name="pedido">Pedidos</string>
 </resources>

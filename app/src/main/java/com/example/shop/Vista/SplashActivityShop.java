@@ -23,7 +23,7 @@ public class SplashActivityShop extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             public void run(){
 
-                Intent intent = new Intent(SplashActivityShop.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivityShop.this, Login.class);
                 startActivity(intent);
                 finish();
             };

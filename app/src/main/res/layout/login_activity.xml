@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_fondo"
     android:orientation="vertical"
     android:padding="48dp">
 
-    <EditText
-        android:id="@+id/inputUser"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:hint="Username" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="322dp"
+        android:layout_height="410dp"
+        android:layout_weight="1">
 
-    <EditText
-        android:id="@+id/inputPassword"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/inputUser"
+            android:layout_width="321dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="304dp"
+            android:layout_weight="1"
+            android:hint="Username"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/botonIniciar"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:text="Iniciar Sesion" />
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="356dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/botonIniciar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="193dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="401dp"
+            android:layout_marginEnd="64dp"
+            android:layout_weight="1"
+            android:text="Iniciar Sesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

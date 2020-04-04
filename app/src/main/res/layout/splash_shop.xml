@@ -4,20 +4,4 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFC107" >
-
-    <ImageView
-<<<<<<< HEAD
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrincipal"
-        android:scaleType="center"
-        app:srcCompat="@drawable/logo_shop" />
-=======
-        android:id="@+id/imageViewSplash"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="top|left|bottom|center"
-        app:srcCompat="@drawable/splash_logo" />
->>>>>>> Steve
-</RelativeLayout>
+    android:background="@drawable/splash_logo" />

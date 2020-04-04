@@ -27,6 +27,14 @@
                 android:icon="@drawable/ic_shop_cart"
                 android:title="@string/pedido">
             </item>
+            <item
+                android:id="@+id/usuarios"
+                android:icon="@drawable/icono_usuarios"
+                android:title="Usuarios" />
+            <item
+                android:id="@+id/productos"
+                android:icon="@drawable/icon_product"
+                android:title="Productos" />
         </menu>
     </item>
 </menu>

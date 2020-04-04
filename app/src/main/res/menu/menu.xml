@@ -10,11 +10,11 @@
             </item>
             <item
                 android:id="@+id/usuarios"
-                android:icon="@color/design_default_color_primary"
+                android:icon="@drawable/icono_usuarios"
                 android:title="Usuarios" />
             <item
                 android:id="@+id/productos"
-                android:icon="@color/design_default_color_secondary_variant"
+                android:icon="@drawable/icon_product"
                 android:title="Productos" />
         </menu>
     </item>

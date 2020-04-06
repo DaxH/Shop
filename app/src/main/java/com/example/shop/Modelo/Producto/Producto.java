@@ -7,6 +7,15 @@ public class Producto {
     private String image;
     private String detail;
     private double price;
+    private int quantity;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -40,11 +49,11 @@ public class Producto {
         this.price = price;
     }
 
-    public int getId() {
-        return id;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

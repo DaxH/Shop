@@ -20,10 +20,11 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
 
 //        TABLA PRODUCTO
         Shop.execSQL("create table producto(id int PRIMARY KEY AUTOINCREMENT, name text NOT NULL, image blob NOT NULL, detail text NOT NULL, " +
-                    "price real NOT NULL, FOREIGN KEY(categoria) REFERENCES categoria_producto(name))");
+                    "price real NOT NULL, quantity int NOT NULL , FOREIGN KEY(categoria) REFERENCES categoria_producto(name))");
 
 //        TABLA USUARIO
-        Shop.execSQL("create table usuario(id int PRIMARY KEY AUTOINCREMENT, name text NOT NULL, last_name text NOT NULL, user_name text NOT NULL)");
+        Shop.execSQL("create table usuario(id int PRIMARY KEY AUTOINCREMENT, name text NOT NULL, last_name text NOT NULL, user_name text NOT NULL" +
+                ", rol text NOT NULL DEFAULT (Cliente))");
 
 //        TABLA PEDIDO
         Shop.execSQL("create table producto(id int PRIMARY KEY AUTOINCREMENT, longitude text NOT NULL, latitude NOT NULL, state text DEFAULT(Pendiente), " +

@@ -9,17 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Vista.MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
-        <activity android:name=".Vista.SplashActivityShop"  android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".Vista.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".Vista.SplashActivityShop"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.Login"></activity>
+        <activity android:name=".Vista.Login" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

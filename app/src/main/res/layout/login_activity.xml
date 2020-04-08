@@ -13,6 +13,29 @@
         android:layout_height="410dp"
         android:layout_weight="1">
 
+        <Button
+            android:id="@+id/botonRegistrar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="95dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="401dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="58dp"
+            android:layout_weight="1"
+            android:background="@color/colorSecundario"
+            android:onClick="validarLogin"
+            android:text="REGISTRARSE"
+            android:textColor="@color/colorCuaternario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.428"
+            tools:ignore="MissingConstraints" />
+
         <EditText
             android:id="@+id/inputUser"
             android:layout_width="321dp"
@@ -40,18 +63,28 @@
             tools:layout_editor_absoluteX="0dp" />
 
         <Button
-            android:id="@+id/botonIniciar"
+            android:id="@+id/botonRegistrar"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="193dp"
-            android:layout_height="48dp"
+            android:layout_width="90dp"
+            android:layout_height="34dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginStart="65dp"
             android:layout_marginTop="401dp"
             android:layout_marginEnd="64dp"
+            android:layout_marginBottom="58dp"
             android:layout_weight="1"
-            android:text="Iniciar Sesion"
+            android:background="@color/colorSecundario"
+            android:onClick="validarLogin"
+            android:text="Iniciar Sesión"
+            android:textColor="@color/colorCuaternario"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.437"
             tools:ignore="MissingConstraints" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

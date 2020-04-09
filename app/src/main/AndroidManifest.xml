@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shop">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".VistaControlador.Producto.ProductEdit"></activity>
+        <activity android:name=".VistaControlador.Producto.ProductDetail" />
+        <activity android:name=".VistaControlador.Producto.ProductCreate" />
         <activity
-            android:name=".Vista.MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:name=".VistaControlador.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Vista.SplashActivityShop"
+            android:name=".VistaControlador.SplashActivityShop"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.Login" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".VistaControlador.Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

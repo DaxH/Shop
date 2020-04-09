@@ -1,4 +1,4 @@
-package com.example.shop.Vista;
+package com.example.shop.VistaControlador;
 
 import android.content.Intent;
 import android.os.Bundle;

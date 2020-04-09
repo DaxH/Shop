@@ -1,4 +1,4 @@
-package com.example.shop.Vista;
+package com.example.shop.VistaControlador;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -10,15 +10,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.example.shop.R;
-import com.example.shop.Vista.Fragments.FragmentCategriaProducto;
-import com.example.shop.Vista.Fragments.FragmentPedido;
-import com.example.shop.Vista.Fragments.FragmentProducto;
-import com.example.shop.Vista.Fragments.FragmentUsuario;
-import com.example.shop.Vista.Fragments.MainFragmen;
+import com.example.shop.VistaControlador.Fragments.FragmentCategriaProducto;
+import com.example.shop.VistaControlador.Fragments.FragmentPedido;
+import com.example.shop.VistaControlador.Fragments.FragmentProducto;
+import com.example.shop.VistaControlador.Fragments.FragmentUsuario;
+import com.example.shop.VistaControlador.Fragments.MainFragmen;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener{

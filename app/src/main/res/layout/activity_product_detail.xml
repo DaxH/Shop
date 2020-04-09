@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VistaControlador.Producto.ProductDetail">
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgProductImage"
+            android:layout_width="149dp"
+            android:layout_height="158dp"
+            app:srcCompat="@drawable/ic_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Quantity"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product Price"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtProductDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Detail"
+            android:textColor="#000000"
+            tools:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="166dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hacer Pedido" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnProductEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Editar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

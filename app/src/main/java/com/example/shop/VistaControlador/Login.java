@@ -1,4 +1,4 @@
-package com.example.shop.Vista;
+package com.example.shop.VistaControlador;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    public void VistaPrincipal(View vista){
+    public void VistaPrincipal(View view){
 //        Al iniciar secion cambia a la venta principal de la apliacion
 
         Intent intent = new Intent(this, MainActivity.class);

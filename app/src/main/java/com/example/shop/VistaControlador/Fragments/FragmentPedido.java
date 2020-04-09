@@ -1,4 +1,4 @@
-package com.example.shop.Vista.Fragments;
+package com.example.shop.VistaControlador.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.shop.R;
 
-public class FragmentCategriaProducto extends Fragment {
+public class FragmentPedido extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_categoria_producto, container,false);
+        View view = inflater.inflate(R.layout.fragment_pedido, container,false);
 
         return  view;
     }

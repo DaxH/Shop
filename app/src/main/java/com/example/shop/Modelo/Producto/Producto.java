@@ -8,6 +8,15 @@ public class Producto {
     private String detail;
     private double price;
     private int quantity;
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public int getId() {
         return id;

@@ -15,11 +15,12 @@ import com.example.shop.R;
 
 import java.util.List;
 
-public class Adapter extends BaseAdapter {
+public class AdapterProduct extends BaseAdapter {
     private Context context;
     private List<Producto> productList;
 
-    public Adapter(Context context, List<Producto> productList) {
+    public AdapterProduct(Context context, List<Producto> productList) {
+
         this.context = context;
         this.productList = productList;
     }
@@ -50,10 +51,12 @@ public class Adapter extends BaseAdapter {
         ImageView imgProductImage = (ImageView)view.findViewById(R.id.imgProductImage);
         TextView txtProductName = (TextView)view.findViewById(R.id.txtProdcutName);
         TextView txtProductPrice = (TextView)view.findViewById(R.id.txtProductPrice);
+        TextView txtProductCategory = (TextView)view.findViewById(R.id.txtPorductCategory);
 
         Glide.with(context).load(productList.get(position).getImage()).into(imgProductImage);
         txtProductName.setText(productList.get(position).getName());
         txtProductPrice.setText("$ " + (Double) productList.get(position).getPrice());
+        txtProductCategory.setText(productList.get(position).getCategory());
 
         return view;
     }

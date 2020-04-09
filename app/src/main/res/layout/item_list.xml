@@ -11,13 +11,12 @@
 
         <ImageView
             android:id="@+id/imgProductImage"
-            android:layout_width="303dp"
-            android:layout_height="110dp"
+            android:layout_width="276dp"
+            android:layout_height="117dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_image" />
 
         <LinearLayout
-            android:id="@+id/imgProductImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -26,20 +25,36 @@
             <TextView
                 android:id="@+id/txtProdcutName"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Prodcut Name" />
+                android:text="Prodcut Name"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtProductPrice"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="Product Price" />
+                android:text="Product Price"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtPorductCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Product Category"
+                android:textColor="#000000"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 

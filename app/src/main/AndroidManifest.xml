@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".VistaControlador.Registro_usuario"></activity>
+        <activity android:name=".VistaControlador.CategoryProduct.CategoryCreate"></activity>
         <activity android:name=".VistaControlador.Producto.ProductEdit" />
         <activity android:name=".VistaControlador.Producto.ProductDetail" />
         <activity android:name=".VistaControlador.Producto.ProductCreate" />

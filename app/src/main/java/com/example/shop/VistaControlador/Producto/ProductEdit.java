@@ -48,7 +48,7 @@ public class ProductEdit extends AppCompatActivity implements View.OnClickListen
 
     private MagicalCamera magicalCamera;
     private MagicalPermissions magicalPermissions;
-    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 1000;
+    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 500;
 
     Producto product = new Producto();
 

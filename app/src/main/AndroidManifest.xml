@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".VistaControlador.Registro_usuario"></activity>
+        <activity android:name=".VistaControlador.Registro_usuario"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".VistaControlador.CategoryProduct.CategoryCreate"></activity>
         <activity android:name=".VistaControlador.Producto.ProductEdit" />
         <activity android:name=".VistaControlador.Producto.ProductDetail" />

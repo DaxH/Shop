@@ -57,10 +57,10 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
     public void insertarUsuario(String name,String last_name, String user_name, String password){
 
         ContentValues valoresUsuarios = new ContentValues();
-        valoresUsuarios.put("Nombre", name);
-        valoresUsuarios.put("Apellido", last_name);
-        valoresUsuarios.put("Username", user_name);
-        valoresUsuarios.put("Password", password);
+        valoresUsuarios.put("name", name);
+        valoresUsuarios.put("last_name", last_name);
+        valoresUsuarios.put("user_name", user_name);
+        valoresUsuarios.put("password", password);
 
         this.getWritableDatabase().insert("usuario",null,valoresUsuarios);
      }
@@ -69,9 +69,11 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
         public Cursor consultarUsuarioPassword(String usuario, String password) throws SQLException{
 
             Cursor cursor=null;
-            cursor=this.getReadableDatabase().query("usuario",
-                    new  String[]{"id","name","last_name","user_name","password"}, "user_name like '"+usuario+"' and Password like '"+password+"'",
-                    null ,null,null,null);
+            cursor=this.getReadableDatabase().rawQuery("SELECT  user_name, password FROM " + "usuario" +
+                    " WHERE user_name = '" + usuario +"'" + " and " + "password = '"+ password +"'",null);
+            System.out.println("USERNAME" + cursor.toString());
+            System.out.println("USERNAME" + cursor);
             return cursor;
         }
-                }
+
+}

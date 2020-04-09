@@ -21,7 +21,7 @@ public class Registro_usuario extends AppCompatActivity {
              etUserRegistro,
              etPasswordRegistro;
 
-    SqliteOpenHelper helper = new SqliteOpenHelper(this,"shopBD",null,1);
+    SqliteOpenHelper helper = new SqliteOpenHelper(this,"shop",null,1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

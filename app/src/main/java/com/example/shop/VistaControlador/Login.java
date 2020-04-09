@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
     Button botonIniSes;
     Button botonRegistro;
 
-    SqliteOpenHelper helper = new SqliteOpenHelper(this,"shopDB",null,1);
+    SqliteOpenHelper helper = new SqliteOpenHelper(this,"shop",null,1);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

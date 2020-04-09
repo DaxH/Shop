@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VistaControlador.Producto.ProductEdit"></activity>
+
+        <activity android:name=".VistaControlador.Registro_usuario"></activity>
+        <activity android:name=".VistaControlador.Producto.ProductEdit" />
         <activity android:name=".VistaControlador.Producto.ProductDetail" />
         <activity android:name=".VistaControlador.Producto.ProductCreate" />
         <activity
@@ -26,9 +28,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".VistaControlador.Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
     </application>
 
 </manifest>

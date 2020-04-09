@@ -6,6 +6,7 @@ public class Usuario {
     private String name;
     private String last_name;
     private String user_name;
+    private String password;
 
     public int getId() {
         return id;
@@ -38,4 +39,8 @@ public class Usuario {
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
 }

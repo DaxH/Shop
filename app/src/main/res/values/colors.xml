@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrincipal">#EEE96D</color>
-    <color name="colorSecundario">#919089</color>
-    <color name="colorBotones">#CEE397</color>
-    <color name="color">#8BAFA9</color>
+    <color name="colorPrincipal">#fadf4f</color>
+    <color name="colorSecundario">#F5ED72</color>
+    <color name ="colorTerciario">#C9E49A</color>
+    <color name="colorCuaternario">#81B2AC</color>
 </resources>

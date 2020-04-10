@@ -25,7 +25,6 @@ public class FragmentUsuario extends Fragment {
 
     private ListView listViewUser;
     private ArrayList<Usuario> arrayUser;
-    private ArrayList<String> arrayUserInfo;
     private AdapterUser adapterUser;
 
     Usuario user;

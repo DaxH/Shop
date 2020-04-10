@@ -48,7 +48,7 @@ public class ProductEdit extends AppCompatActivity implements View.OnClickListen
 
     private MagicalCamera magicalCamera;
     private MagicalPermissions magicalPermissions;
-    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 500;
+    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 100;
 
     Producto product = new Producto();
 
@@ -117,7 +117,6 @@ public class ProductEdit extends AppCompatActivity implements View.OnClickListen
             register.put("price", productPrice);
             register.put("quantity", productQuantity);
             register.put("image", product.getImage());
-            register.put("categoria", "Zapato");
 
             int value = bd.update("producto", register,"id="+ productId,null);
             bd.close();

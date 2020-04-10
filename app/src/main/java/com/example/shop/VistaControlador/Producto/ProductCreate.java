@@ -63,12 +63,12 @@ public class ProductCreate extends AppCompatActivity implements View.OnClickList
         magicalPermissions = new MagicalPermissions(this,permissions);
         magicalCamera = new MagicalCamera(this, RESIZE_PHOTO_PIXELES_PERCENTAGE, magicalPermissions);
 
-        txtProductId = (EditText)findViewById(R.id.inputProductId);
-        txtProductName = (EditText)findViewById(R.id.inputProductName);
-        txtProductDetail = (EditText)findViewById(R.id.inputProductDetail);
-        txtProductPrice = (EditText)findViewById(R.id.inputProductPrice);
-        txtProductQuantity = (EditText)findViewById(R.id.inputProductQuantity);
-        imgProducImage = (ImageView)findViewById(R.id.productImage);
+        txtProductId = (EditText)findViewById(R.id.inputPedidoCodigo);
+        txtProductName = (EditText)findViewById(R.id.inputPedidoName);
+        txtProductDetail = (EditText)findViewById(R.id.inputPedidoDetail);
+        txtProductPrice = (EditText)findViewById(R.id.inputPedidoLatitud);
+        txtProductQuantity = (EditText)findViewById(R.id.inputPedidoCantidad);
+        imgProducImage = (ImageView)findViewById(R.id.pedidoImage);
         btnSelectImage = (Button)findViewById(R.id.btnSelectImage);
         btnCategoryCreate = (Button)findViewById(R.id.btnCategoryCreate);
         btnProductSave = (Button)findViewById(R.id.btnProductSave);

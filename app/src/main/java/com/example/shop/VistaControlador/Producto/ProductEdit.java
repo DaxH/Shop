@@ -2,27 +2,22 @@ package com.example.shop.VistaControlador.Producto;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.shop.Modelo.Producto.Producto;
 import com.example.shop.R;
 import com.example.shop.VistaControlador.BaseDatos.SqliteOpenHelper;
-import com.example.shop.VistaControlador.Fragments.FragmentProducto;
 import com.frosquivel.magicalcamera.MagicalCamera;
 import com.frosquivel.magicalcamera.MagicalPermissions;
 import com.frosquivel.magicalcamera.Utilities.ConvertSimpleImage;
@@ -61,12 +56,12 @@ public class ProductEdit extends AppCompatActivity implements View.OnClickListen
         magicalPermissions = new MagicalPermissions(this,permissions);
         magicalCamera = new MagicalCamera(this, RESIZE_PHOTO_PIXELES_PERCENTAGE, magicalPermissions);
 
-        inputProductId = (EditText)findViewById(R.id.inputProductId);
-        inputProductName = (EditText)findViewById(R.id.inputProductName);
-        inputProductQuantity = (EditText)findViewById(R.id.inputProductQuantity);
-        inputProductPrice = (EditText)findViewById(R.id.inputProductPrice);
-        inputProductDetail = (EditText)findViewById(R.id.inputProductDetail);
-        imgProductImage = (ImageView)findViewById(R.id.productImage);
+        inputProductId = (EditText)findViewById(R.id.inputPedidoCodigo);
+        inputProductName = (EditText)findViewById(R.id.inputPedidoName);
+        inputProductQuantity = (EditText)findViewById(R.id.inputPedidoCantidad);
+        inputProductPrice = (EditText)findViewById(R.id.inputPedidoLatitud);
+        inputProductDetail = (EditText)findViewById(R.id.inputPedidoDetail);
+        imgProductImage = (ImageView)findViewById(R.id.pedidoImage);
 
         btnProductSave = (Button)findViewById(R.id.btnProductEdit);
         btnSelectImage = (Button)findViewById(R.id.btnImage);

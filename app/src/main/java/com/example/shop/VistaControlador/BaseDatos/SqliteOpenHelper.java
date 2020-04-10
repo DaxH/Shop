@@ -31,10 +31,11 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
                 ", rol text DEFAULT('Cliente') )");
 
 //        TABLA PEDIDO
-        Shop.execSQL("create table pedido(id INTEGER PRIMARY KEY AUTOINCREMENT, longitude text NOT NULL, latitude NOT NULL, state text DEFAULT('Pendiente'), " +
+        Shop.execSQL("create table pedido(id INTEGER PRIMARY KEY AUTOINCREMENT, longitude text NOT NULL, latitude NOT NULL, state text DEFAULT('Pendiente')," +
+                " cantidad int NOT NULL," + "total_pagar real ," +
                 "producto_id int, usuario_id int, FOREIGN KEY(producto_id) REFERENCES producto(id), FOREIGN KEY(usuario_id) REFERENCES usuario(id))");
     }
-
+//como int
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

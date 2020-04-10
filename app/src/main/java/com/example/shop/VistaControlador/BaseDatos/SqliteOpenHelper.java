@@ -71,8 +71,6 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
             Cursor cursor=null;
             cursor=this.getReadableDatabase().rawQuery("SELECT  user_name, password FROM " + "usuario" +
                     " WHERE user_name = '" + usuario +"'" + " and " + "password = '"+ password +"'",null);
-            System.out.println("USERNAME" + cursor.toString());
-            System.out.println("USERNAME" + cursor);
             return cursor;
         }
 

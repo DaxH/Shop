@@ -70,7 +70,7 @@ public class SqliteOpenHelper extends SQLiteOpenHelper {
 
             Cursor cursor=null;
             cursor=this.getReadableDatabase().query("usuario",
-                    new  String[]{"id","name","last_name","user_name","password"}, "user_name like '"+usuario+"' and Password like '"+password+"'",
+                    new  String[]{"name","last_name","user_name","password"}, "Nombre like '"+usuario+"' and Password like '"+password+"'",
                     null ,null,null,null);
             return cursor;
         }

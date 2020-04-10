@@ -27,48 +27,40 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
-        botonIniSes = (Button)findViewById(R.id.botonIniSes);
-        botonRegistro = (Button)findViewById(R.id.botonRegistro);
+
+        botonRegistro = (Button) findViewById(R.id.botonRegistro);
 
         botonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Registro_usuario.class);
+                Intent intent = new Intent(getApplicationContext(), Registro_usuario.class);
                 startActivity(intent);
             }
         });
-
+        botonIniSes = (Button) findViewById(R.id.botonIniSes);
         botonIniSes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText etUser =(EditText)findViewById(R.id.etUser);
-                EditText etPassword=(EditText)findViewById(R.id.etPassword);
+                EditText etUser = (EditText) findViewById(R.id.etUser);
+                EditText etPassword = (EditText) findViewById(R.id.etPassword);
 
                 try {
-                    Cursor cursor = helper.consultarUsuarioPassword(etUser.getText().toString(), etPassword.getText().toString());
+                    Cursor cursor = helper.consultarUsuarioPassword(etUser.getText().toString(),etPassword.getText().toString());
 
-                    if (cursor.getCount()>0){
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    if (cursor.getCount() > 0) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                    }
-                    else{
-                        Toast.makeText(getApplicationContext(),"Usuario y/o password incorrectos",
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Usuario y/o password incorrectos",
                                 Toast.LENGTH_LONG).show();
                     }
                     etUser.setText("");
                     etPassword.setText("");
                     etUser.findFocus();
-                }
-                catch (SQLException e){
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
         });
-    }
-
-    public void VistaPrincipal(View view){
-//        Al iniciar secion cambia a la venta principal de la apliacion
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }

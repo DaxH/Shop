@@ -156,6 +156,7 @@ public class FragmentProducto extends Fragment implements View.OnClickListener, 
         startActivity(intent);
     }
 
+//    Accion Lista
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //Acciones para los items de la lista, Cambia a la actividad ProductoDetail
@@ -175,9 +176,10 @@ public class FragmentProducto extends Fragment implements View.OnClickListener, 
 
     }
 
+//    Accion del spiner
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+//        Filtrado por Categorias
         category.setName(parent.getItemAtPosition(position).toString());
         if (category.getName() == "Todos" ){
             ProductListAll();

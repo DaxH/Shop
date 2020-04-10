@@ -1,5 +1,6 @@
 package com.example.shop.VistaControlador.Fragments;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -19,14 +21,16 @@ import com.example.shop.Modelo.Producto.Producto;
 import com.example.shop.R;
 import com.example.shop.VistaControlador.BaseDatos.SqliteOpenHelper;
 import com.example.shop.VistaControlador.Pedido.AdapterPedido;
+import com.example.shop.VistaControlador.Pedido.PedidoDetail;
 
 import java.util.ArrayList;
 
-public class FragmentPedido extends Fragment {
+public class FragmentPedido extends Fragment implements AdapterView.OnItemClickListener {
 
     private ListView listViewPedido;
     private ArrayList<Pedido> arrayPedido;
     private AdapterPedido adapterPedido;
+
 
     Pedido pedido;
 
@@ -40,6 +44,7 @@ public class FragmentPedido extends Fragment {
         listViewPedido =(ListView)view.findViewById(R.id.listPedido);
         adapterPedido=new AdapterPedido(getActivity(),arrayPedido);
         listViewPedido.setAdapter(adapterPedido);
+        listViewPedido.setOnItemClickListener(this);
 
         return  view;
     }
@@ -66,5 +71,16 @@ public class FragmentPedido extends Fragment {
             bd.close();
 
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Pedido pedido = arrayPedido.get(position);
+        Intent intent = new Intent(getActivity(), PedidoDetail.class);
+        intent.putExtra("productoID",pedido.getProducto_id());
+        intent.putExtra("usuarioID",pedido.getUsuario_id());
+        intent.putExtra("cantidadProducto",pedido.getCantidad());
+        intent.putExtra("totalPagar",pedido.getTotal_pagar());
+        startActivity(intent);
     }
 }

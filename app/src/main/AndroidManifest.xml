@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VistaControlador.Pedido.PedidoCreate"></activity>
-        <activity android:name=".VistaControlador.Usuario.UserDetail" />
+
         <activity
             android:name=".VistaControlador.Registro_usuario"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

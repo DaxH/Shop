@@ -39,6 +39,7 @@ public class FragmentProducto extends Fragment implements View.OnClickListener, 
     private ArrayAdapter<CharSequence> adapterSpinner;
     private  AdapterProduct adapterProduct;
 
+    Producto product;
     CategoriaProducto category = new CategoriaProducto();
     @Nullable
     @Override
@@ -65,7 +66,6 @@ public class FragmentProducto extends Fragment implements View.OnClickListener, 
         //Traemos los datos de la tabla porductos y los presentamos en una lista
         SqliteOpenHelper admin = new SqliteOpenHelper(getActivity(), "shop", null, 1);
         SQLiteDatabase bd = admin.getReadableDatabase();
-        Producto product = null;
 
         listProduct.setAdapter(null);
         arrayProduct.clear();
@@ -77,15 +77,15 @@ public class FragmentProducto extends Fragment implements View.OnClickListener, 
         while (cursor.moveToNext()){
 
             product = new Producto();
-              product.setId(cursor.getInt(0));
-              product.setName(cursor.getString(1));
-              product.setImage(cursor.getBlob(2));
-              product.setDetail(cursor.getString(3));
-              product.setPrice(cursor.getDouble(4));
-              product.setQuantity(cursor.getInt(5));
-              product.setCategory(cursor.getString(6));
+            product.setId(cursor.getInt(0));
+            product.setName(cursor.getString(1));
+            product.setImage(cursor.getBlob(2));
+            product.setDetail(cursor.getString(3));
+            product.setPrice(cursor.getDouble(4));
+            product.setQuantity(cursor.getInt(5));
+            product.setCategory(cursor.getString(6));
 
-              arrayProduct.add(product);
+            arrayProduct.add(product);
         }
         bd.close();
         listProduct.setAdapter(adapterProduct);

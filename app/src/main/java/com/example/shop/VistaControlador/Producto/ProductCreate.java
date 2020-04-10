@@ -49,7 +49,7 @@ public class ProductCreate extends AppCompatActivity implements View.OnClickList
 
     private MagicalCamera magicalCamera;
     private MagicalPermissions magicalPermissions;
-    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 500;
+    private int RESIZE_PHOTO_PIXELES_PERCENTAGE = 100;
 
     Producto product = new Producto();
     CategoriaProducto category;

@@ -77,9 +77,9 @@ public class PedidoDetail extends AppCompatActivity implements View.OnClickListe
         }else {
             Glide.with(this).load(producto.getImage()).into(imageViewClienteDet);
         }
-        txtproductQuantityPedido.setText("Cantidad "+cantidadPedido);
-        txtproductPricePedido.setText("Total a Pagar "+totalPagar);
-        txtClientNombre.setText("Cliente " +usuario.getName()+ " " + usuario.getLast_name());
+        txtproductQuantityPedido.setText("Cantidad: "+cantidadPedido);
+        txtproductPricePedido.setText("Total: $"+totalPagar);
+        txtClientNombre.setText("Cliente: " +usuario.getName()+ " " + usuario.getLast_name());
         db.close();
     }
 

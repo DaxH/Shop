@@ -32,7 +32,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/inputProductId"
+                android:id="@+id/inputPedidoCodigo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
-                android:id="@+id/inputProductDetail"
+                android:id="@+id/inputPedidoDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="148dp"
                 android:layout_marginTop="10dp"
@@ -55,10 +55,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputProductName" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPedidoName" />
 
             <EditText
-                android:id="@+id/inputProductQuantity"
+                android:id="@+id/inputPedidoCantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -69,10 +69,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.124"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputProductDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPedidoDetail" />
 
             <EditText
-                android:id="@+id/inputProductPrice"
+                android:id="@+id/inputPedidoLatitud"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -82,7 +82,7 @@
                 android:maxLength="6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.762"
-                app:layout_constraintStart_toEndOf="@+id/inputProductQuantity"
+                app:layout_constraintStart_toEndOf="@+id/inputPedidoCantidad"
                 app:layout_constraintTop_toBottomOf="@+id/btnImage" />
 
         </LinearLayout>
@@ -94,7 +94,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/inputProductName"
+                android:id="@+id/inputPedidoName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -107,7 +107,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <ImageView
-                android:id="@+id/productImage"
+                android:id="@+id/pedidoImage"
                 android:layout_width="147dp"
                 android:layout_height="182dp"
                 android:layout_marginLeft="10dp"
@@ -115,7 +115,7 @@
                 android:padding="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.737"
-                app:layout_constraintStart_toEndOf="@+id/inputProductDetail"
+                app:layout_constraintStart_toEndOf="@+id/inputPedidoDetail"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 app:srcCompat="@drawable/ic_image"/>
 
@@ -129,7 +129,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.858"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productImage" />
+                app:layout_constraintTop_toBottomOf="@+id/pedidoImage" />
 
         </LinearLayout>
 
@@ -151,7 +151,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputProductPrice" />
+            app:layout_constraintTop_toBottomOf="@+id/inputPedidoLatitud" />
     </LinearLayout>
 
 </LinearLayout>

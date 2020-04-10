@@ -2,17 +2,20 @@ package com.example.shop.VistaControlador.Producto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.shop.Modelo.Producto.Producto;
 import com.example.shop.R;
+import com.example.shop.VistaControlador.BaseDatos.SqliteOpenHelper;
 
 public class ProductDetail extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,6 +31,7 @@ public class ProductDetail extends AppCompatActivity implements View.OnClickList
     private TextView txtProductPrice;
     private ImageView imgProductImage;
     private TextView txtProductDetail;
+    private EditText inputPedidoCantidad;
 
     private EditText inputProductQuantity;
     private Button btnProductEdit;
@@ -39,13 +43,14 @@ public class ProductDetail extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
 
-        txtProductName = (TextView)findViewById(R.id.txtProductName);
+        txtProductName = (TextView)findViewById(R.id.txtUserList);
         txtProductQuantity = (TextView)findViewById(R.id.txtProductQuantity);
         txtProductPrice = (TextView)findViewById(R.id.txtProductPrice);
         txtProductDetail = (TextView)findViewById(R.id.txtProductDetail);
         imgProductImage = (ImageView)findViewById(R.id.imgProductImage);
+        inputPedidoCantidad = (EditText)findViewById(R.id.inputPedidoCantidad);
 
-        inputProductQuantity = (EditText)findViewById(R.id.inputProductQuantity);
+        inputProductQuantity = (EditText)findViewById(R.id.inputPedidoCantidad);
         btnOrder = (Button)findViewById(R.id.btnOrder);
         btnProductEdit =(Button)findViewById(R.id.btnProductEdit);
 
@@ -58,6 +63,7 @@ public class ProductDetail extends AppCompatActivity implements View.OnClickList
         productId = intent.getIntExtra("productId",1);
 
         btnProductEdit.setOnClickListener(this);
+        btnOrder.setOnClickListener(this);
 
         Detail();
 
@@ -73,19 +79,67 @@ public class ProductDetail extends AppCompatActivity implements View.OnClickList
 
     }
 
+    public void crearPedido(){
+        SqliteOpenHelper admin = new SqliteOpenHelper(getApplicationContext(),"shop",null,1);
+
+        SQLiteDatabase db = admin.getWritableDatabase();
+
+        ContentValues registrar = new ContentValues();
+
+        ContentValues editar = new ContentValues();
+
+
+
+        int cantidadProducto = Integer.parseInt(inputPedidoCantidad.getText().toString());
+        if(cantidadProducto<=0||cantidadProducto>productQuantity){
+            Toast.makeText(getApplicationContext(),"Verifique la cantidad ingresada",Toast.LENGTH_LONG).show();
+
+
+        }
+        else{
+            double totalPagar = cantidadProducto*productPrice;
+            registrar.put("cantidad",cantidadProducto);
+            registrar.put("total_pagar",totalPagar);
+            registrar.put("producto_id",productId);
+            registrar.put("usuario_id",1);
+            registrar.put("latitude","51512");
+            registrar.put("longitude","2313.213");
+            db.insert("pedido", null,registrar);
+
+            Toast.makeText(getApplicationContext(),"Pedido registrado",Toast.LENGTH_LONG).show();
+
+            int restarStock=productQuantity-cantidadProducto;
+
+            editar.put("quantity",restarStock);
+            int value = db.update("producto",editar,"id="+productId,null);
+            db.close();
+
+        }
+    }
+
 
     @Override
     public void onClick(View view) {
         //Para editar el producto
-        Intent intent = new Intent(getApplicationContext(), ProductEdit.class);
+        switch (view.getId()){
+            case R.id.btnProductEdit:
 
-        intent.putExtra("productId", productId);
-        intent.putExtra("productName", productName);
-        intent.putExtra("productQuantity", productQuantity);
-        intent.putExtra("productPrice", productPrice);
-        intent.putExtra("productImage", productImage);
-        intent.putExtra("productDetail", productDetail);
+            Intent intent = new Intent(getApplicationContext(), ProductEdit.class);
 
-        startActivity(intent);
+            intent.putExtra("productId", productId);
+            intent.putExtra("productName", productName);
+            intent.putExtra("productQuantity", productQuantity);
+            intent.putExtra("productPrice", productPrice);
+            intent.putExtra("productImage", productImage);
+            intent.putExtra("productDetail", productDetail);
+
+            startActivity(intent);
+            break;
+
+            case R.id.btnOrder:
+                crearPedido();
+                break;
+        }
     }
+
 }

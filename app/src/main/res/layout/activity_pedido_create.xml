@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:isScrollContainer="false"
     android:orientation="vertical"
-    tools:context=".VistaControlador.Producto.ProductCreate">
+    tools:context=".VistaControlador.Pedido.PedidoCreate">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crear Producto"
+        android:text="Crear Pedido"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -21,14 +20,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="354dp"
+        android:layout_height="497dp"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="155dp"
-            android:layout_height="343dp"
+            android:layout_height="479dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
@@ -58,12 +58,26 @@
                 app:layout_constraintTop_toBottomOf="@+id/inputPedidoName" />
 
             <EditText
+                android:id="@+id/inputPedidoEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Estado"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.762"
+                app:layout_constraintStart_toEndOf="@+id/inputPedidoCantidad"
+                app:layout_constraintTop_toBottomOf="@+id/btnImage" />
+
+            <EditText
                 android:id="@+id/inputPedidoCantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Cantidad"
+                android:hint="Longitud"
                 android:inputType="number"
                 android:maxLength="3"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +91,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="Precio"
+                android:hint="Latitud"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.762"
+                app:layout_constraintStart_toEndOf="@+id/inputPedidoCantidad"
+                app:layout_constraintTop_toBottomOf="@+id/btnImage" />
+
+            <EditText
+                android:id="@+id/inputPedidoCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Cantidad"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.762"
+                app:layout_constraintStart_toEndOf="@+id/inputPedidoCantidad"
+                app:layout_constraintTop_toBottomOf="@+id/btnImage" />
+
+            <EditText
+                android:id="@+id/inputPedidoTotalPagar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Total a pagar"
                 android:inputType="numberDecimal"
                 android:maxLength="6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +131,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="343dp"
+            android:layout_height="477dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
@@ -151,32 +193,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btnProductSave"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="Guardar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputPedidoLatitud" />
-
-        <Button
-            android:id="@+id/btnCategoryCreate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="55dp"
-            android:text="Crear Categoria"
-            android:textSize="12sp" />
     </LinearLayout>
 
 </LinearLayout>
